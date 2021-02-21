@@ -76,9 +76,11 @@ export default {
   methods: {
     clicked() {
       if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.email)) {
-        let dat = {
+         let dat = {
           name:this.name,
-          email:this.email
+          email:this.email,
+          dob:this.dob,
+          phone:this.phone
         }
         sendbody(dat);
         this.$router.push('list');
